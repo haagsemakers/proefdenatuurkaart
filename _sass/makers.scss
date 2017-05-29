@@ -1,0 +1,46 @@
+// !compileOnSave
+
+.page.makers {
+  a {
+    img {
+      opacity: 1;
+      transition: opacity 50ms ease-in;
+    }
+    &:hover {
+      img {
+        opacity: 0.7;
+      }
+    }
+  }
+  .caption {
+    font-size: 1.2rem;
+    line-height: 2;
+  }
+}
+
+.page.maker-single {
+  .top-content {
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccc;
+    a {
+      padding: 0.5rem 0 0.25rem 0;
+      display: block;
+      font-size: 0.8rem;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .content-type {
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    color: #aaa;
+  }
+  p.excerpt {
+    font-size: 140%;
+    font-weight: 600;
+  }
+  p {
+    font-size: 120%;
+  }
+}

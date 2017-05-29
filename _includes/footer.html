@@ -1,0 +1,43 @@
+<footer class="body-footer">
+  <div class="first">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6">
+          <ul class="nav justify-content-center">
+            {% for link in site.data.navigation.footer_center %}
+              {% assign class = nil %}
+              {% if page.url contains link.url %}
+                {% assign class = 'active' %}
+              {% endif %}
+              <li class="nav-item">
+                <a class="nav-link {{class}}" href="{{site.baseurl}}/{{link.url}}">{{link.title}}</a>
+            </li>
+            {% endfor %}
+          </ul>
+          <p>Haagse Makers is geregistreerd onder KvK nummer NL140031261B01</p>
+        </div>
+        <div class="col-md-3">
+          <div class="col social text-middle">
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="second">
+    <div class="container">
+    </div>
+  </div>
+</footer>
+
+
+<script src="{{site.baseurl}}/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+<script src='/assets/js/map.js'></script>

@@ -1,0 +1,32 @@
+// !compileOnSave
+
+footer {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 3rem;
+  .first {
+    background-color: #eee;
+    padding: 2rem;
+    ul {
+      margin-bottom: 1rem;
+      li {
+        a {
+          color: #333;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .second {
+    padding: 1rem 0;
+    img {
+      margin: 0.5rem;
+    }
+  }
+  p {
+    font-size: 0.8rem;
+    color: 666;
+  }
+}

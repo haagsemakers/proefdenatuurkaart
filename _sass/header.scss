@@ -1,0 +1,41 @@
+// !compileOnSave
+
+header.page-header {
+  ul {
+    li {
+      &.active {
+        a {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+header {
+  .navbar {
+    background-color: #FFF;
+    .navbar-collapse {
+      text-align: center;
+      .navbar-nav {
+        .nav-link {
+          color: #000;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  button.navbar-toggler {
+    border: 0;
+    .navbar-toggler-icon {
+
+    }
+  }
+  .navbar-brand {
+    color: rgba(0,0,0,.9);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}

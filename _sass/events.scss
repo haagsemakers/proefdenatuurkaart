@@ -1,0 +1,73 @@
+// !compileOnSave
+
+.page.events {
+  a {
+    img {
+      opacity: 1;
+      transition: opacity 50ms ease-in;
+      min-height: 100px;
+      background-color: #efefef;
+      display: block;
+    }
+    &:hover {
+      text-decoration: none;
+      img {
+        opacity: 0.7;
+      }
+    }
+  }
+  h2 {
+    font-size: 2rem;
+    padding: .25em 0;
+    margin-top: .75em;
+    letter-spacing: -1px;
+    border-top: 1px solid #efefef;
+  }
+  time {
+    color: #333;
+    font-size: 0.8rem;
+  }
+  .caption {
+    clear: both;
+    font-size: 1.4rem;
+    font-weight: 600
+  }
+}
+
+.page.single {
+  .post-header-wrapper {
+    text-transform: uppercase;
+    .backlink a {
+      padding: 0.5rem 0 0.25rem 0;
+      display: block;
+      font-size: 0.8rem;
+      border-bottom: 1px solid #ccc;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .post-type {
+      text-transform: uppercase;
+      margin-top: 0.5rem;
+      color: #aaa;
+    }
+  }
+
+  .post-content-wrapper {
+    .post-details {
+      .event-details-section {
+        padding: 0.5rem 0;
+      }
+    }
+    .post-content {
+      p:first-child {
+        font-weight: bold;
+        font-size: 120%;
+      }
+    }
+  }
+
+  .map {
+    margin-top: 3rem;
+  }
+}

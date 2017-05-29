@@ -1,0 +1,59 @@
+// !compileOnSave
+
+ #map {
+   width:100%;
+   min-height: 500px;
+ }
+
+.page.home {
+
+  section.slideshow {
+    .slide {
+      height: 20rem;
+      background-color: #efefef;
+      text-align: center;
+      padding: 10rem 0;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  section.intro {
+    padding: 3rem 0;
+    .intro-block {
+      font-size: 2rem;
+      padding-right: 30px;
+      a {
+        font-size: 1rem;
+        color: #000;
+        text-transform: uppercase;
+      }
+    }
+  }
+  section.news {
+    padding: 3rem 0;
+    h2 {
+      font-size: 2rem;
+    }
+    a {
+      font-size: 1.5rem;
+      font-weight: normal;
+    }
+    a:hover {}
+    .news {
+      background-color: #000;
+      padding: 50px;
+      color: #FFF;
+      text-align: center;
+      a {
+        color: #FFF;
+      }
+    }
+    .program {
+      background-color: #efefef;
+      padding: 50px;
+      color: #333;
+      text-align: center;
+    }
+  }
+}

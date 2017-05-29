@@ -1,0 +1,22 @@
+
+
+title: Stadslandbouwdag
+description: Een dag vol stadslandbouw.
+twitter: haagsemakers
+authors: Arn van der Pluijm
+social_logo_path: /assets/brand/haagsemakers-social-logo.png
+social_image_path: /assets/brand/haagsemakers-social.png
+
+current_version: 0.1
+repo: https://github.com/haagsemakers/stadslandbouwkaart
+
+permalinks: pretty
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+collections:
+  locations:
+    output: true
+    permalink: /locaties/:path/

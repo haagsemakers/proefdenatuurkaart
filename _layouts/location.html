@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body class="page">
+
+    {% include header.html %}
+
+    <main class="" id="content">
+      <section class="single post-type-location">
+
+        <div class="post-header-wrapper">
+          <img src="{{page.img_header}}" class="img-fluid" style="width: 100%; height: 400px">
+        </div>
+
+        <div class="post-header-wrapper">
+          <div class="container">
+            <div class="backlink">
+              <a href="{{site.baseurl}}\locaties">&larr; Alle locaties</a>
+            </div>
+            <div class="post-type">Locatie</div>
+            <h1 class="page-title">{{page.title}}</h1>
+          </div>
+        </div>
+
+        <div class="post-content-wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="col post-details">&nbsp;</div>
+              <div class="col post-content">
+                {{content}}
+              </div>
+            </div>
+          </div>
+        </div> <!-- end post-content-wrapper -->
+      </section>
+    </main>
+
+    {% include footer.html %}
+  </body>
+</html>
