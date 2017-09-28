@@ -33,19 +33,4 @@ section.map-wrapper {
       text-transform: capitalize;
     }
   }
-
-  .mapboxgl-popup-content {
-    padding: 0;
-    box-shadow: 2px 2px 3px rgba(0,0,0,0.30);
-    .popup-text {
-      padding: 15px;
-      .title {
-        font-weight: 600;
-        font-size: 16px;
-      }
-      .category {
-        color: #666;
-      }
-    }
-  }
 }
