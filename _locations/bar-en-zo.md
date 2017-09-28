@@ -8,4 +8,4 @@ location:
   longitude: -0.2416807
 img_header: "http://teteatete.nl/wp-content/uploads/2016/06/Bar-en-Zo-1-1024x768.jpg"
 ---
-aefaef
+Bar Enzo is een vintage en koffiebar met lokale producten. 

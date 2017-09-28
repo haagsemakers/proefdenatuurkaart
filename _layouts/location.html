@@ -11,15 +11,15 @@
       <section class="single post-type-location">
 
         <div class="post-header-wrapper">
-          <img src="{{page.img_header}}" class="img-fluid" style="width: 100%; height: 400px">
+          <div class="img-container" style="background-image: url('{{page.img_header}}'); width: 100%; height: 400px; background-size: cover; background-position: center center;"></div>
         </div>
 
         <div class="post-header-wrapper">
           <div class="container">
             <div class="backlink">
-              <a href="{{site.baseurl}}\locaties">&larr; Alle locaties</a>
+              <a href="/{{site.baseurl}}">&larr; Overzichtskaart</a>
             </div>
-            <div class="post-type">Locatie</div>
+            <!-- <div class="post-type">Locatie</div> -->
             <h1 class="page-title">{{page.title}}</h1>
           </div>
         </div>
@@ -27,7 +27,9 @@
         <div class="post-content-wrapper">
           <div class="container">
             <div class="row">
-              <div class="col post-details">&nbsp;</div>
+              <div class="col post-details">
+                {{page.location.latitude}}{{page.location.longitude}}
+              </div>
               <div class="col post-content">
                 {{content}}
               </div>
