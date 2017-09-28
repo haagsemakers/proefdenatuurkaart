@@ -5,7 +5,7 @@ authors: Arn van der Pluijm
 social_logo_path: /assets/brand/haagsemakers-social-logo.png
 social_image_path: /assets/brand/haagsemakers-social.png
 
-baseurl: /stadslandbouwkaart
+baseurl: /proefdenatuurkaart
 current_version: 0.1
 repo: https://github.com/haagsemakers/stadslandbouwkaart
 
