@@ -185,7 +185,7 @@ map.on('load', function() {
     // listPlaces();
 
     map.on('click', 'unclustered-point', function (e) {
-      var h = '<img src="/assets/img/greens.jpg">';
+      var h = '<img src="/stadslandbouwkaart/assets/img/greens.jpg">';
         h += '<br>';
         h += '<div class="popup-text">';
           h += '<div class="title">' + e.features[0].properties.Naam + '</div>';
