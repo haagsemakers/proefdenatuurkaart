@@ -7,7 +7,7 @@ social_image_path: /assets/brand/haagsemakers-social.png
 
 baseurl: /proefdenatuurkaart
 current_version: 0.1
-repo: https://github.com/haagsemakers/stadslandbouwkaart
+repo: https://github.com/haagsemakers/proefdenatuurkaart
 
 permalinks: pretty
 
