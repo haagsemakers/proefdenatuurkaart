@@ -1,9 +1,13 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoidXJiYW5saW5rIiwiYSI6IlZCS1ZxN28ifQ.7OA0oFvBqk6f_XAIDSpMHA';
+'use strict';
 
-var style_url = 'mapbox://styles/urbanlink/cj35v1ofe00032ro0dd6ja34h';
-style_url = 'mapbox://styles/mapbox/light-v9';
-style_url = 'mapbox://styles/urbanlink/cj3pj2jmf00572rmz7cws716r';
-var data_url = 'https://api.mapbox.com/datasets/v1/urbanlink/cj344049800042wnoibpdmpot/features?access_token=pk.eyJ1IjoidXJiYW5saW5rIiwiYSI6IlZCS1ZxN28ifQ.7OA0oFvBqk6f_XAIDSpMHA';
+var accessToken = 'pk.eyJ1IjoidXJiYW5saW5rIiwiYSI6IlZCS1ZxN28ifQ.7OA0oFvBqk6f_XAIDSpMHA';
+var styleId = 'cj3pj2jmf00572rmz7cws716r';
+var datasetId = 'cj84jepfc08h733mjvygd6rro';
+
+mapboxgl.accessToken = accessToken;
+
+var style_url = 'mapbox://styles/urbanlink/' + styleId;
+var data_url = 'https://api.mapbox.com/datasets/v1/urbanlink/'+datasetId+'/features?access_token=' + accessToken;
 
 var bounds = [
   [52.004269, 4.101677], // sw
@@ -69,10 +73,11 @@ map.on('load', function() {
     console.log('geojson loaded!');
     // Add the places to the table list
     locations = geojson;
+    console.log(locations);
     listPlaces();
 
-    map.addSource("earthquakes", {
-       type: "geojson",
+    map.addSource('earthquakes', {
+       type: 'geojson',
        // Point to GeoJSON data. This example visualizes all M1.0+ earthquakes
        // from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
        data: geojson,
@@ -82,23 +87,23 @@ map.on('load', function() {
    });
 
    map.addLayer({
-        id: "clusters",
-        type: "circle",
-        source: "earthquakes",
-        filter: ["has", "point_count"],
+        id: 'clusters',
+        type: 'circle',
+        source: 'earthquakes',
+        filter: ['has', 'point_count'],
         paint: {
-            "circle-color": {
-                property: "point_count",
-                type: "interval",
+            'circle-color': {
+                property: 'point_count',
+                type: 'interval',
                 stops: [
-                    [0, "#51bbd6"],
-                    [100, "#f1f075"],
-                    [750, "#f28cb1"],
+                    [0, '#FFF'],
+                    [100, '#FFF'],
+                    [750, '#FFF'],
                 ]
             },
-            "circle-radius": {
-                property: "point_count",
-                type: "interval",
+            'circle-radius': {
+                property: 'point_count',
+                type: 'interval',
                 stops: [
                     [0, 20],
                     [100, 30],
@@ -109,27 +114,27 @@ map.on('load', function() {
     });
 
    map.addLayer({
-        id: "cluster-count",
-        type: "symbol",
-        source: "earthquakes",
-        filter: ["has", "point_count"],
+        id: 'cluster-count',
+        type: 'symbol',
+        source: 'earthquakes',
+        filter: ['has', 'point_count'],
         layout: {
-            "text-field": "{point_count_abbreviated}",
-            "text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
-            "text-size": 12
+            'text-field': '{point_count_abbreviated}',
+            'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
+            'text-size': 12
         }
   });
 
   map.addLayer({
-        id: "unclustered-point",
-        type: "circle",
-        source: "earthquakes",
-        filter: ["!has", "point_count"],
+        id: 'unclustered-point',
+        type: 'circle',
+        source: 'earthquakes',
+        filter: ['!has', 'point_count'],
         paint: {
-            "circle-color": "#11b4da",
-            "circle-radius": 4,
-            "circle-stroke-width": 1,
-            "circle-stroke-color": "#fff"
+            'circle-color': '#FFF',
+            'circle-radius': 4,
+            'circle-stroke-width': 1,
+            'circle-stroke-color': '#333'
         }
   });
 
@@ -138,12 +143,12 @@ map.on('load', function() {
     //   var el = document.createElement('div');
     //   el.className = 'marker';
     //
-    //   var h = '<img src="/assets/img/greens.jpg">';
+    //   var h = '<img src='/assets/img/greens.jpg'>';
     //   h += '<br>';
-    //   h += '<div class="popup-text">';
-    //     h += '<div class="title">' + marker.properties.Naam + '</div>';
-    //     h += '<p class="description">' + marker.properties.Omschrijving + '</p>';
-    //     h += '<div class="address">' + marker.properties.Adres + '</div>';
+    //   h += '<div class='popup-text'>';
+    //     h += '<div class='title'>' + marker.properties.Naam + '</div>';
+    //     h += '<p class='description'>' + marker.properties.Omschrijving + '</p>';
+    //     h += '<div class='address'>' + marker.properties.Adres + '</div>';
     //   h += '</div>';
     //   // make a marker for each feature and add to the map
     //   new mapboxgl.Marker(el, { offset: [-50 / 2, -50 / 2] })
@@ -228,12 +233,12 @@ map.on('load', function() {
 //         type: 'circle',
 //         source: 'places',
 //         paint: {
-//           "circle-radius": 10,
+//           'circle-radius': 10,
 //           'circle-opacity': 0,
 //           'circle-stroke-width': 2,
 //           'circle-stroke-color': '#000',
 //           //'circle-blur': 1,
-//           // "circle-color": categoryColors[category] || '#eee',
+//           // 'circle-color': categoryColors[category] || '#eee',
 //           // 'circle-color': {
 //           //   property: 'category',
 //           //   type: 'categorical',
@@ -244,7 +249,7 @@ map.on('load', function() {
 //           // }
 //         },
 //         // layout: {
-//         //   'icon-image': 'music-15', //symbol + "-15",
+//         //   'icon-image': 'music-15', //symbol + '-15',
 //         //   'icon-allow-overlap': true
 //         // },
 //         filter: ['==', 'category', category]
@@ -264,12 +269,12 @@ map.on('load', function() {
 //       // location of the feature, with description HTML from its properties.
 //       map.on('click', layerID, function (e) {
 //
-//         var h = '<img src="/assets/img/greens.jpg">';
+//         var h = '<img src='/assets/img/greens.jpg'>';
 //         h += '<br>';
-//         h += '<div class="popup-text">';
-//           h += '<div class="title">' + e.features[0].properties.name + '</div>';
-//           h += '<p class="description">' + e.features[0].properties.name + '</p>';
-//           h += '<div class="category">' + e.features[0].properties.category + '</div>';
+//         h += '<div class='popup-text'>';
+//           h += '<div class='title'>' + e.features[0].properties.name + '</div>';
+//           h += '<p class='description'>' + e.features[0].properties.name + '</p>';
+//           h += '<div class='category'>' + e.features[0].properties.category + '</div>';
 //         h += '</div>';
 //           new mapboxgl.Popup()
 //               .setLngLat(e.features[0].geometry.coordinates)
@@ -302,8 +307,8 @@ map.on('load', function() {
   //   type: 'circle',
   //   source: 'places',
   //   paint: {
-  //     "circle-radius": 6,
-  //           "circle-color": "#B42222"
+  //     'circle-radius': 6,
+  //           'circle-color': '#B42222'
   //   }
   // });
 // }
